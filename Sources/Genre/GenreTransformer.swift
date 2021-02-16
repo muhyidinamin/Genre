@@ -19,7 +19,6 @@ public struct GenreTransformer: Mapper {
     
   public func transformResponseToEntity(request: String?, response: [GenreResponse]) -> [GenreEntity] {
         return response.map { result in
-          print("genre step")
           let newGenre = GenreEntity()
           newGenre.id = result.id ?? 0
           newGenre.title = result.title ?? "Unknow"
